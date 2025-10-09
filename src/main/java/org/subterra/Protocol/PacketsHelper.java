@@ -1,12 +1,12 @@
-package org.solaris.Protocol;
+package org.subterra.Protocol;
 
 import lombok.SneakyThrows;
-import org.solaris.ClientSession;
-import org.solaris.Protocol.Packets.AddMapObject;
-import org.solaris.Protocol.Packets.EntityAction;
-import org.solaris.Protocol.Packets.HandShakePacket;
-import org.solaris.Protocol.Packets.PlayerAuthInput;
-import org.solaris.Utils.ByteBuf;
+import org.subterra.ClientSession;
+import org.subterra.Protocol.Packets.AddMapObject;
+import org.subterra.Protocol.Packets.EntityAction;
+import org.subterra.Protocol.Packets.HandShakePacket;
+import org.subterra.Protocol.Packets.PlayerAuthInput;
+import org.subterra.Utils.ByteBuf;
 
 import java.nio.ByteBuffer;
 import java.util.ArrayList;

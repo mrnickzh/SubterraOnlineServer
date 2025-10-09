@@ -1,7 +1,7 @@
-package org.solaris;
+package org.subterra;
 
-import org.solaris.Protocol.Packets.EntityAction;
-import org.solaris.Protocol.PacketsHelper;
+import org.subterra.Protocol.Packets.EntityAction;
+import org.subterra.Protocol.PacketsHelper;
 
 import javax.websocket.*;
 import javax.websocket.server.ServerEndpoint;

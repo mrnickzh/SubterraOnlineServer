@@ -1,4 +1,4 @@
-package org.solaris.Utils;
+package org.subterra.Utils;
 
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;

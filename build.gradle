@@ -2,7 +2,7 @@ plugins {
     id 'java'
 }
 
-group = 'org.solaris'
+group = 'org.subterra'
 version = '1.0-SNAPSHOT'
 
 repositories {

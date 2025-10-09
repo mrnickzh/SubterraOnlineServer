@@ -1,7 +1,7 @@
-package org.solaris.Protocol;
+package org.subterra.Protocol;
 
-import org.solaris.ClientSession;
-import org.solaris.Utils.ByteBuf;
+import org.subterra.ClientSession;
+import org.subterra.Utils.ByteBuf;
 
 public class Packet {
     public void read(ByteBuf buffer) {}

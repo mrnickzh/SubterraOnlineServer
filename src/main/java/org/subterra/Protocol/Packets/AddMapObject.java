@@ -1,7 +1,7 @@
-package org.solaris.Protocol.Packets;
+package org.subterra.Protocol.Packets;
 
-import org.solaris.Protocol.Packet;
-import org.solaris.Utils.ByteBuf;
+import org.subterra.Protocol.Packet;
+import org.subterra.Utils.ByteBuf;
 
 public class AddMapObject extends Packet {
     private int id;

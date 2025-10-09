@@ -1,4 +1,4 @@
-package org.solaris;
+package org.subterra;
 
 import lombok.Getter;
 import lombok.Setter;

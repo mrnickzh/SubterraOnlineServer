@@ -1,11 +1,11 @@
-package org.solaris.Protocol.Packets;
+package org.subterra.Protocol.Packets;
 
-import org.solaris.ClientSession;
-import org.solaris.Entity;
-import org.solaris.Main;
-import org.solaris.Protocol.Packet;
-import org.solaris.Protocol.PacketsHelper;
-import org.solaris.Utils.ByteBuf;
+import org.subterra.ClientSession;
+import org.subterra.Entity;
+import org.subterra.Main;
+import org.subterra.Protocol.Packet;
+import org.subterra.Protocol.PacketsHelper;
+import org.subterra.Utils.ByteBuf;
 
 public class PlayerAuthInput extends Packet {
     private Entity entity;
