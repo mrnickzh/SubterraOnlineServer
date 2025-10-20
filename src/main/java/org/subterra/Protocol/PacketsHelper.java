@@ -2,10 +2,7 @@ package org.subterra.Protocol;
 
 import lombok.SneakyThrows;
 import org.subterra.ClientSession;
-import org.subterra.Protocol.Packets.AddMapObject;
-import org.subterra.Protocol.Packets.EntityAction;
-import org.subterra.Protocol.Packets.HandShakePacket;
-import org.subterra.Protocol.Packets.PlayerAuthInput;
+import org.subterra.Protocol.Packets.*;
 import org.subterra.Utils.ByteBuf;
 
 import java.nio.ByteBuffer;
@@ -19,11 +16,12 @@ public class PacketsHelper {
         packets.add(AddMapObject.class);
         packets.add(EntityAction.class);
         packets.add(PlayerAuthInput.class);
+        packets.add(GenerateChunk.class);
     }
 
     @SneakyThrows
     public static void send(ClientSession session, Packet packet) {
-        ByteBuf buffer = new ByteBuf(1024);
+        ByteBuf buffer = new ByteBuf(65536);
         int id = packets.indexOf(packet.getClass());
         buffer.writeInt(id);
         packet.write(buffer);

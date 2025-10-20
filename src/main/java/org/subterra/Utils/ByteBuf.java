@@ -84,7 +84,6 @@ public class ByteBuf {
     }
 
     private void checkBounds(int required) {
-        System.out.println(required);
         if (position + required > buffer.length) {
             throw new IndexOutOfBoundsException(
                     position + required > buffer.length ? "Buffer overflow" : "Buffer underflow");

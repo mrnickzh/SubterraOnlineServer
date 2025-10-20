@@ -6,6 +6,7 @@ import org.subterra.Main;
 import org.subterra.Protocol.Packet;
 import org.subterra.Protocol.PacketsHelper;
 import org.subterra.Utils.ByteBuf;
+import org.subterra.Utils.Vector2;
 
 import java.util.UUID;
 
@@ -22,13 +23,8 @@ public class HandShakePacket extends Packet {
     public void process(ClientSession client) {
         client.setUsername(this.name);
         client.setUuid(UUID.randomUUID());
-        PacketsHelper.send(client, new AddMapObject(1, new float[]{0, 0, 0}, new float[]{0, 0, 0}));
 
-        PacketsHelper.send(client, new AddMapObject(0, new float[]{3, 0, 3}, new float[]{0, 0, 0}));
-        PacketsHelper.send(client, new AddMapObject(0, new float[]{3, 0, 4}, new float[]{0, 0, 0}));
-        PacketsHelper.send(client, new AddMapObject(0, new float[]{3, 0, 5}, new float[]{0, 0, 0}));
-
-        Entity entity = new Entity(client.getUuid(), new float[]{0, 0, 0}, new float[]{0, 0, 0});
+        Entity entity = new Entity(client.getUuid(), new Vector2(0, 0), 0);
         client.setEntity(entity);
         for (ClientSession s : Main.sessions) {
             if (!s.equals(client)) {

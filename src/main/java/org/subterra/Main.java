@@ -2,6 +2,8 @@ package org.subterra;
 
 import org.subterra.Protocol.Packets.EntityAction;
 import org.subterra.Protocol.PacketsHelper;
+import org.subterra.World.ChunkGenerator;
+import org.subterra.World.Map2D;
 
 import javax.websocket.*;
 import javax.websocket.server.ServerEndpoint;
@@ -14,6 +16,8 @@ import java.util.Set;
 public class Main {
     public static Set<ClientSession> sessions = Collections.synchronizedSet(new HashSet<>());
     public static Set<Entity> entityStorage = Collections.synchronizedSet(new HashSet<>());
+    public static Map2D worldChunks = new Map2D();
+    public static ChunkGenerator chunkgen = new ChunkGenerator();
 
     @OnOpen
     public void onOpen(Session session) {
@@ -49,7 +53,7 @@ public class Main {
 
     public static void main(String[] args) {
         org.glassfish.tyrus.server.Server server =
-                new org.glassfish.tyrus.server.Server("localhost", 20201, "/", null, Main.class);
+                new org.glassfish.tyrus.server.Server("localhost", 30303, "/", null, Main.class);
 
         try {
             server.start();
