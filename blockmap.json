@@ -1,0 +1,14 @@
+[
+	{ "height": -100, "blockmap":
+		[
+			{ "id": 0, "chance": 1.0 }
+		]
+	},
+	
+	{ "height": 0, "blockmap":
+		[
+			{ "id": 1, "chance": 0.7 },
+			{ "id": 2, "chance": 0.3 }
+		]
+	}
+]

@@ -24,7 +24,7 @@ public class HandShakePacket extends Packet {
         client.setUsername(this.name);
         client.setUuid(UUID.randomUUID());
 
-        Entity entity = new Entity(client.getUuid(), new Vector2(0, 0), 0);
+        Entity entity = new Entity(client.getUuid(), new Vector2(0, -100), 0);
         client.setEntity(entity);
         for (ClientSession s : Main.sessions) {
             if (!s.equals(client)) {

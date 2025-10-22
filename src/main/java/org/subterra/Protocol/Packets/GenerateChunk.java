@@ -8,6 +8,7 @@ import org.subterra.Utils.ByteBuf;
 import org.subterra.Utils.Vector2;
 import org.subterra.World.Block;
 
+import java.util.HashMap;
 import java.util.NoSuchElementException;
 
 public class GenerateChunk extends Packet {
@@ -26,7 +27,7 @@ public class GenerateChunk extends Packet {
         System.out.println(chunk == null);
         if (chunk == null) {
             System.out.println("Chunk " + chunkpos.x + " " + chunkpos.y + " requested");
-            chunk = Main.chunkgen.generateChunk();
+            chunk = Main.chunkgen.generateChunk(Main.blockmap.get(chunkpos.y));
             Main.worldChunks.append(chunkpos, chunk);
             System.out.println("Chunk " + chunkpos.x + " " + chunkpos.y + " generated");
         }
@@ -34,8 +35,8 @@ public class GenerateChunk extends Packet {
         buffer.writeFloat(chunkpos.x);
         buffer.writeFloat(chunkpos.y);
 
-        for (int i = 0; i < 64; i++){
-            for (int j = 0; j < 64; j++){
+        for (int i = 0; i < 16; i++){
+            for (int j = 0; j < 16; j++){
                 buffer.writeInt(chunk[i][j].id);
                 buffer.writeFloat(chunk[i][j].x);
                 buffer.writeFloat(chunk[i][j].y);
