@@ -81,7 +81,7 @@ public class Main {
         }
 
         org.glassfish.tyrus.server.Server server =
-                new org.glassfish.tyrus.server.Server("localhost", 30303, "/", null, Main.class);
+                new org.glassfish.tyrus.server.Server("localhost", 20202, "/", null, Main.class);
 
         try {
             server.start();

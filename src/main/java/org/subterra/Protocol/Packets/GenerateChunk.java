@@ -24,9 +24,9 @@ public class GenerateChunk extends Packet {
         Block[][] chunk;
 
         chunk = Main.worldChunks.get(chunkpos);
-        System.out.println(chunk == null);
+        System.out.println("Chunk " + chunkpos.x + " " + chunkpos.y + " requested");
         if (chunk == null) {
-            System.out.println("Chunk " + chunkpos.x + " " + chunkpos.y + " requested");
+            System.out.println("Chunk " + chunkpos.x + " " + chunkpos.y + " generating");
             chunk = Main.chunkgen.generateChunk(Main.blockmap.get(chunkpos.y));
             Main.worldChunks.append(chunkpos, chunk);
             System.out.println("Chunk " + chunkpos.x + " " + chunkpos.y + " generated");
